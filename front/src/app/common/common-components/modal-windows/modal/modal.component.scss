@@ -1,0 +1,26 @@
+:root {
+    --bs-btn-color: var(--tomtomColorPrimary) !important;
+    --bs-btn-bg: var(--tomtomColorSecondary) !important;
+    --bs-btn-border-color: var(--tomtomColorSecondary) !important;
+    --bs-btn-hover-color: var(--tomtomColorPrimary) !important;
+    --bs-btn-hover-bg: var(--tomtomColorSecondaryLight) !important;
+    --bs-btn-hover-border-color: var(--tomtomColorSecondaryLight) !important;
+    --bs-btn-focus-shadow-rgb: 60, 153, 110;
+    --bs-btn-active-color: var(--tomtomColorPrimary) !important;
+    --bs-btn-active-bg: #146c43;
+    --bs-btn-active-border-color: #13653f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--tomtomColorPrimary) !important;
+    --bs-btn-disabled-bg: #198754;
+    --bs-btn-disabled-border-color: #198754;
+}
+
+.modal-footer-hide {
+    display: none;
+}
+
+.modal-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

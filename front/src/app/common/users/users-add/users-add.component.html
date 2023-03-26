@@ -1,0 +1,39 @@
+<div class="custom-modal">
+    <div class="custom-body">
+        <form novalidate [formGroup]="userForm" autocomplete="off">
+            <div class="row">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <input type="text" placeholder="{{ REGISTER.NAME | translate }}"
+                            class="form-control size-l mb-2" formControlName="name" />
+                    </div>
+                    <div *ngIf="this.wasSubmitted && this.userForm.controls['name'].errors" class="col-12">
+                        <small class="text-danger mt-1 d-flex" *ngIf="wasSubmitted && userForm.controls['name'].errors">
+                            {{REGISTER.NAME_ERROR | translate}}
+                        </small>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="text" placeholder="{{ REGISTER.SURNAME | translate }}"
+                            class="form-control size-l mb-2" formControlName="surname" />
+                    </div>
+                    <div *ngIf="this.wasSubmitted && this.userForm.controls['surname'].errors" class="col-12">
+                        <small class="text-danger mt-1 d-flex"
+                            *ngIf="wasSubmitted && userForm.controls['surname'].errors">
+                            {{REGISTER.SURNAME_ERROR | translate}}
+                        </small>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="text" placeholder="{{ REGISTER.USER | translate }}"
+                            class="form-control size-l mb-2" formControlName="email" />
+                    </div>
+                    <div *ngIf="this.wasSubmitted && this.userForm.controls['email'].errors" class="col-12">
+                        <small class="text-danger mt-1 d-flex"
+                            *ngIf="wasSubmitted && userForm.controls['email'].errors">
+                            {{REGISTER.EMAIL_ERROR | translate}}
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

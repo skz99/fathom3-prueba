@@ -1,0 +1,55 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+
+}
+
+.login-container {
+    height: 100vh;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login {
+    width: 25rem;
+    max-width: 90%;
+    height: 30rem;
+
+    .logo-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .forgotPass {
+        color: var(--fathom3ColorSecondary);
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .forgotPass:hover {
+        color: var(--fathom3ColorSecondaryDark);
+    }
+
+    .loginButton {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.loader-container {
+    min-height: 5rem;
+}

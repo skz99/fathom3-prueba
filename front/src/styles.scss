@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import "./scss/buttons";
+@import "./scss/inputs";
+@import "./scss/left-menu";
+@import "./scss/loader";
+@import "./scss/overview";
+@import "./scss/variables";
+@import 'ngx-toastr/toastr';
+
+:root {
+  // APP PRIMARY COLOR
+  --fathom3ColorPrimary: #FDC500;
+  --fathom3ColorPrimaryDark: #feae00;
+  --fathom3ColorPrimaryLight: #fede7a;
+  --fathom3ColorPrimaryDarker: #ffebaf;
+
+  // APP SECONDARY COLOR
+  --fathom3ColorSecondary: #bdbdbd;
+  --fathom3ColorSecondaryDark: #8d8d8d;
+  --fathom3ColorSecondaryLight: #efefef;
+
+  // ERROR COLORS
+  --fathom3ColorError: #b00020;
+  --fathom3ColorErrorDark: #790000;
+  --fathom3ColorErrorLight: #e94948;
+
+  // COLORS
+  --fathom3ColorSuccess: #28a745;
+  --fathom3ColorWarning: #ffc107;
+  --fathom3ColorInfo: #2e7fdf;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: "Noto Sans", "sans-serif", "Helvetica", "Arial";
+  font-size: 13px;
+  margin: 0;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 13px;
+  }
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px !important;
+  border: none !important;
+
+  @media only screen and (max-width: $breakpoint-md) {
+    width: 0;
+    height: 0;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fathom3ColorPrimaryDark);
+  border-radius: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fathom3ColorPrimary);
+}
+
+.modal-content {
+  margin-top: 5rem;
+}
+
+.modal-backdrop {
+  --bs-backdrop-zindex: 2100;
+}
+
+.modal {
+  z-index: 2150;
+}
+
+bs-datepicker-container,
+bs-daterangepicker-container {
+  z-index: 2200;
+}

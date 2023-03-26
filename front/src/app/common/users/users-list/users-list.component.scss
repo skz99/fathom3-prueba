@@ -1,0 +1,16 @@
+@import "../../../../scss/variables";
+
+.searcher-style {
+    width: 100%;
+    > input {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: $breakpoint-md) {
+    .searcher-style {
+        width: auto;
+        > input {
+            width: 15rem;
+        }
+    }
+}

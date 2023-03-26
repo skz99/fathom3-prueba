@@ -1,0 +1,48 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+
+}
+
+.link {
+    color: var(--fathom3ColorPrimary)
+}
+
+.register-container {
+    height: 100vh;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.register {
+    width: 25rem;
+    max-width: 90%;
+    height: 30rem;
+
+    .logo-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+    .registerButton {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.loader-container {
+    min-height: 5rem;
+}

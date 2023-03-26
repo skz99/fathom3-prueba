@@ -1,0 +1,135 @@
+@import "variables";
+
+.with-menu-layout {
+    display: flex;
+    height: calc(100% - 64px);
+    @media screen and (max-width: $breakpoint-md) {
+        flex-direction: column;
+    }
+    .sidebar {
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+        transition: width 0.8s;
+
+        .collapse-icon {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 0rem;
+
+            a {
+                &.button-icon {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        
+        >a {
+            &:not(.button-icon) {
+                padding: 0.5rem 0;
+                color: var(--gray);
+                display: block;
+                opacity: 1;
+                transition: opacity 0.8s;
+                cursor: pointer;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;            
+                
+                &:hover {
+                    text-decoration: none;
+                    color: var(--dark);
+                }
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+            min-height: 48px;
+            overflow: hidden;
+            transition: max-height 0.8s, min-height 0.8s;
+            &:not(.toggle-collapse) {
+                max-height: 48px;
+                min-height: 48px;
+                >a {
+                    &:not(.button-icon) {
+                        opacity: 0;
+                    }
+                }
+                .collapse-icon {
+                    a {
+                        transform: rotate(-90deg);
+                    }
+                }     
+            }
+            &.toggle-collapse {
+                min-height: 330px;
+                max-height: 330px;
+                >a {
+                    &:not(.button-icon) {
+                        opacity: 1;
+                    }
+                }  
+                .collapse-icon {
+                    a {
+                        transform: rotate(90deg);
+                    }
+                } 
+            }
+        }
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+            &:not(.toggle-collapse) {
+                width: 50px;
+                >a {
+                    &:not(.button-icon) {
+                        opacity: 0;
+                    }
+                }
+                .collapse-icon {
+                    a {
+                        transform: rotate(180deg);
+                    }
+                }      
+            }
+            &.toggle-collapse {
+                width: 250px;
+            }
+        }
+
+        @media screen and (min-width: $breakpoint-xl) {
+            &.toggle-collapse {
+                width: 50px;
+                >a {
+                    &:not(.button-icon) {
+                        opacity: 0;
+                    }
+                }
+
+                .collapse-icon {
+                    a {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &:not(.toggle-collapse) {
+                width: 250px;
+            }
+        }
+    }
+
+    .main {
+        background-color: #f6f6f6;
+        // padding: 0rem 1rem 0 1rem;
+        flex: 1 1;
+        @media screen and (max-width: $breakpoint-md) {
+            padding: 1rem 0 0 0;
+        }
+
+        >div {
+            width: 100%; 
+            height: 100%; 
+            background-color: white;
+            overflow: auto;
+        }
+    }
+}
+

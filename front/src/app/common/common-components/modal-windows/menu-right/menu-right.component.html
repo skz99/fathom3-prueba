@@ -1,0 +1,28 @@
+<div class="backdrop" [class.open]="opened">
+
+</div>
+
+<div class="menu-right"
+     [class.open]="opened">
+
+  <div class="header">
+    <div>
+      <h3>
+        {{ title }}
+      </h3>
+  
+      <div>
+        {{ subtitle }}
+      </div>  
+    </div>
+    <div class="action-buttons">
+        <a class="btn btn-outline-danger" (click)="closeClickInternal()">{{ 'Cancelar'}}</a>
+        <a class="btn btn-primary" (click)="acceptClickInternal()">{{ 'Aceptar '}}</a>
+    </div>  
+  </div>
+
+
+  <div class="body">
+    <div appModalHost></div>
+  </div>
+</div>

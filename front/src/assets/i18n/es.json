@@ -1,0 +1,75 @@
+{
+  "LOGIN": {
+    "TITLE": "Iniciar sesión",
+    "USER": "Correo electrónico",
+    "USER_EXAMPLE": "Ejemplo@email.com",
+    "PASS": "Contraseña",
+    "MIN_PASS": "Mínimo 6 caracteres",
+    "FORGOT_PASS": "He olvidado mi contraseña",
+    "REGISTER": "Crear una cuenta",
+    "CAPS_LOCKED_ON": "Bloq mayus activado",
+    "EMAIL_ERROR": "Introduzca un email"
+  },
+  "REGISTER": {
+    "REGISTER": "Crear una cuenta",
+    "COMPANY": "Empresa",
+    "COMPANY_PLACE": "Nombre de la empresa",
+    "USER": "Correo electrónico",
+    "USER_PLACE": "Dirección de correo electrónico",
+    "PASS": "Contraseña",
+    "MIN_PASS": "Minimo 6 caracteres",
+    "COUNTRY": "País",
+    "COUNTRY_DROPDOWN": "País",
+    "SELFEMPLOYED": "Autónomo",
+    "ACC_TYPE": "Tipo de cuenta",
+    "CONTINUE": "Continuar",
+    "ALREADY_ACC": "¿Tienes una cuenta?",
+    "LOGIN": "Iniciar sesión",
+    "PRIVACY_1": "Acepto los",
+    "TERMS": "Términos de servicio",
+    "PRIVACY_2": "y",
+    "POLICIES": "Políticas de privacidad.",
+    "CAPS_LOCKED_ON": "Bloq mayus activado",
+    "REPEAT_PASSWORD": "Repetir contraseña",
+    "INVITED_TO": "Has sido invitado para unirte a ",
+    "RESTORE_PASSWORD": "Restablecer contraseña",
+    "EMAIL_ERROR": "Introduzca un email",
+    "NAME": "Nombre",
+    "SURNAME": "Apellidos",
+    "NAME_ERROR": "Introduzca su nombre",
+    "SURNAME_ERROR": "Introduzca sus apellidos"
+  },
+  "DEFAULT_ERROR": {
+    "NOT_ALLOWED": "No tienes permiso para acceder a esta sección"
+  },
+  "FORGOTTEN_PASSWORD": {
+    "EMAIL": "Introduce tu email",
+    "INSTRUCTIONS_1": "Siga las instrucciones recibidas",
+    "INSTRUCTIONS_2": "en el correo electrónico.",
+    "BACK": "Volver al inicio",
+    "VERIFY": "Verificar"
+  },
+  "REGISTER_ERRORS": {
+    "EMAIL_FORMAT": "Formato de email no valido",
+    "PASSWORD_ERROR": "Introduzca una contraseña",
+    "PASSWORD_MIN": "Contraseña mínima de 6 caracteres",
+    "ACCOUNT_TYPE_ERROR": "Debe seleccionar el tipo de cuenta",
+    "PRIVACY_POLICY_ERROR": "No olvides aceptar la política de privacidad",
+    "COMPANY_ERROR": "Introduzca una empresa",
+    "REPEAT_PASS_ERROR": "Las contraseñas no coinciden"
+  },
+  "VERIFY_CODE": {
+    "CODE_SENT": "Le hemos enviado un código de verificación al correo electrónico.",
+    "THANKS": " Gracias por confiar en Metodo de Negocio"
+  },
+  "BUTTONS": {
+    "CREATE": "Crear",
+    "CANCEL_BUTTON": "Cancelar",
+    "AGREE_BUTTON": "Aceptar"
+  },
+  "USER": {
+    "ADD": "Nuevo usuario",
+    "EDIT": "Editar usuario",
+    "DELETE": "Eliminar usuario"
+  }
+}

@@ -1,0 +1,1 @@
+export const SecretPassJwt = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";

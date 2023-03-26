@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{ title | translate }} </h4>
+  <h5 *ngIf="subtitle" class="modal-title pull-left">{{ subtitle | translate }} </h5>
+  <button type="button" class="btn-close" aria-label="Close" (click)="closeClickInternal()"></button>
+
+</div>
+<div class="modal-body">
+  <div appModalHost></div>
+</div>
+<div class="modal-footer" [class.modal-footer-hide]="!isWithfooter">
+  <button type="button" class="btn btn-danger" (click)="closeClickInternal()">{{ BUTTONS.CANCEL_BUTTON | translate
+    }}</button>
+  <button type="button" class="btn btn-success" (click)="acceptClickInternal()" *ngIf="!onlyCancel">{{ BUTTONS.AGREE_BUTTON | translate
+    }}</button>
+</div>

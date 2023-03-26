@@ -1,0 +1,75 @@
+{
+  "LOGIN": {
+    "TITLE": "Sign in",
+    "USER": "Email",
+    "USER_EXAMPLE": "Example@email.com",
+    "PASS": "Password",
+    "MIN_PASS": "Minimum 6 characters",
+    "FORGOT_PASS": "I forgot my password",
+    "REGISTER": "Sign up",
+    "CAPS_LOCKED_ON": "Caps locked on",
+    "EMAIL_ERROR": "Introduce the Email"
+  },
+  "REGISTER": {
+    "REGISTER": "Sign up",
+    "COMPANY": "Company",
+    "COMPANY_PLACE": "Company name",
+    "USER": "Email",
+    "USER_PLACE": "Email address",
+    "PASS": "Password",
+    "MIN_PASS": "Minimum 6 characters",
+    "COUNTRY": "Country",
+    "COUNTRY_DROPDOWN": "Country",
+    "SELFEMPLOYED": "Self-employed",
+    "ACC_TYPE": "Account type",
+    "CONTINUE": "Continue",
+    "ALREADY_ACC": "Already have an account?",
+    "LOGIN": "Sign in",
+    "PRIVACY_1": "I accept the",
+    "TERMS": "Terms of service",
+    "PRIVACY_2": "and",
+    "POLICIES": "Privacy policies.",
+    "CAPS_LOCKED_ON": "Caps locked on",
+    "REPEAT_PASSWORD": "Repeat password",
+    "INVITED_TO": "You've been invited to join to ",
+    "RESTORE_PASSWORD": "Restore password",
+    "EMAIL_ERROR": "Introduce the Email",
+    "NAME": "Name",
+    "SURNAME": "Surname",
+    "NAME_ERROR": "Introduce your Surname",
+    "SURNAME_ERROR": "Introduce your Surname"
+  },
+  "DEFAULT_ERROR": {
+    "NOT_ALLOWED": "You are not allowed to be in this section"
+  },
+  "FORGOTTEN_PASSWORD": {
+    "EMAIL": "Introduce your email",
+    "INSTRUCTIONS_1": "Follow the instructions received",
+    "INSTRUCTIONS_2": "in the email.",
+    "BACK": "Go back to the start",
+    "VERIFY": "Verify"
+  },
+  "REGISTER_ERRORS": {
+    "EMAIL_FORMAT": "Email format is invalid",
+    "PASSWORD_ERROR": "Introduce the password",
+    "PASSWORD_MIN": "Introduce 6 characters minimum",
+    "ACCOUNT_TYPE_ERROR": "Select an account type",
+    "PRIVACY_POLICY_ERROR": "Don't forget to accept the privacy policy",
+    "COMPANY_ERROR": "Introduce the company's name",
+    "REPEAT_PASS_ERROR": "Passwords don't match"
+  },
+  "VERIFY_CODE": {
+    "CODE_SENT": "We sent to you a verification code to your email.",
+    "THANKS": "Thank you for trust in Metodo de Negocio"
+  },
+  "BUTTONS": {
+    "CREATE": "Create",
+    "CANCEL_BUTTON": "Cancel",
+    "AGREE_BUTTON": "Agree"
+  },
+  "USER": {
+    "ADD": "New user",
+    "EDIT": "Edit user",
+    "DELETE": "Delete user"
+  }
+}

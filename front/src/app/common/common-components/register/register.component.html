@@ -1,0 +1,88 @@
+<oc-spinner *ngIf="loadingBoolean"></oc-spinner>
+
+<div class="register-container">
+    <div class="register">
+        <div class="logo-img">
+            <img src="../../assets/logo.png">
+        </div>
+        <div class="register-body">
+            <form [formGroup]="registerForm" novalidate>
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <input type="text" placeholder="{{ REGISTER.NAME | translate }}"
+                            class="form-control size-l mb-2" formControlName="name" />
+                    </div>
+                    <div *ngIf="this.wasSubmitted && this.registerForm.controls['name'].errors" class="col-12">
+                        <small class="text-danger mt-1 d-flex"
+                            *ngIf="wasSubmitted && registerForm.controls['name'].errors">
+                            {{REGISTER.NAME_ERROR | translate}}
+                        </small>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="text" placeholder="{{ REGISTER.SURNAME | translate }}"
+                            class="form-control size-l mb-2" formControlName="surname" />
+                    </div>
+                    <div *ngIf="this.wasSubmitted && this.registerForm.controls['surname'].errors" class="col-12">
+                        <small class="text-danger mt-1 d-flex"
+                            *ngIf="wasSubmitted && registerForm.controls['surname'].errors">
+                            {{REGISTER.SURNAME_ERROR | translate}}
+                        </small>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="text" placeholder="{{ REGISTER.USER | translate }}"
+                            class="form-control size-l mb-2" formControlName="email" />
+                    </div>
+                    <div *ngIf="this.wasSubmitted && this.registerForm.controls['email'].errors" class="col-12">
+                        <small class="text-danger mt-1 d-flex"
+                            *ngIf="wasSubmitted && registerForm.controls['email'].errors">
+                            {{REGISTER.EMAIL_ERROR | translate}}
+                        </small>
+                    </div>
+                    <div class="col-12 mt-3 input-group">
+                        <input class="form-control size-l" formControlName="password" id="pass" name="pass"
+                            placeholder="{{ REGISTER.PASS | translate }}" required=""
+                            [type]="show ? 'text' : 'password'" aria-describedby="showPass">
+                        <span class="input-group-text" (click)="showPassword()" [innerHtml]="showPass"
+                            style="border-radius: 0; width: 3rem;" id="showPass"></span>
+                    </div>
+                    <div *ngIf="this.wasSubmitted && this.registerForm.controls['password'].errors" class="col-12 mt-2">
+                        <small class="text-danger mt-1"
+                            *ngIf="wasSubmitted && registerForm.controls['password'].value.length == 0">
+                            {{REGISTER_ERRORS.PASSWORD_ERROR | translate}}
+                        </small>
+                        <small class="text-danger mt-1"
+                            *ngIf="wasSubmitted && registerForm.controls['password'].value.length > 0 && registerForm.controls['password'].value.length < 6">
+                            {{REGISTER_ERRORS.PASSWORD_ERROR | translate}}
+                        </small>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <button type="button" (click)="newAccount()" class="btn btn-primary w-100">
+                            <span>{{ REGISTER.CONTINUE | translate }}</span>
+                        </button>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <div class="text-center">
+                            <h4 style="color: #abb5be">{{ REGISTER.ALREADY_ACC | translate }} <a class="link"
+                                    (click)="redirectTo('login')">{{ 'REGISTER.LOGIN' | translate }}</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center align-items-center loader-container"
+                        *ngIf="loadingBoolean">
+                        <div class="loader">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-center mt-4">
+                        <div>
+                            <a (click)="translate.use('es'); selectLang('es')"><img src="assets/es.svg"
+                                    width="30px" /></a>
+                        </div>
+                        <div class="ms-2">
+                            <a (click)="translate.use('en'); selectLang('en')"><img src="assets/en.svg"
+                                    width="30px" /></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

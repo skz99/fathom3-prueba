@@ -1,0 +1,68 @@
+<oc-spinner *ngIf="loadingBoolean"></oc-spinner>
+
+<div class="login-container">
+  <div class="login">
+    <div class="logo-img ">
+      <img src="../../assets/logo.png">
+    </div>
+    <div class="login-body">
+      <form [formGroup]="loginForm" novalidate>
+        <div class="row">
+          <div class="col-12 mt-3">
+            <input type="text" placeholder="{{ LOGIN.USER_EXAMPLE | translate }}" class="form-control size-l mb-2" formControlName="username" />
+          </div>
+          <div *ngIf="this.wasSubmitted && this.loginForm.controls['username'].errors" class="col-12">
+            <small class="text-danger mt-1 d-flex" *ngIf="wasSubmitted && loginForm.controls['username'].errors">
+              {{LOGIN.EMAIL_ERROR | translate}}
+            </small>
+          </div>
+          <div class="col-12 mt-3 input-group">
+            <input class="form-control size-l" formControlName="password" id="pass" name="pass" placeholder="{{ LOGIN.PASS | translate }}"
+              required="" [type]="show ? 'text' : 'password'" aria-describedby="showPass">
+            <span class="input-group-text" (click)="showPassword()" [innerHtml]="showPass"
+              style="border-radius: 0; width: 3rem;" id="showPass"></span>
+          </div>
+          <div *ngIf="this.wasSubmitted && this.loginForm.controls['password'].errors" class="col-12 mt-2">
+            <small class="text-danger mt-1" *ngIf="wasSubmitted && loginForm.controls['password'].value.length == 0">
+              {{REGISTER_ERRORS.PASSWORD_ERROR | translate}}
+            </small>
+            <small class="text-danger mt-1"
+              *ngIf="wasSubmitted && loginForm.controls['password'].value.length > 0 && loginForm.controls['password'].value.length < 6">
+              {{REGISTER_ERRORS.PASSWORD_ERROR | translate}}
+            </small>
+          </div>
+          <div class="col-12 mt-2">
+            <small>
+              <a class="forgotPass" href="/forgotten-password">
+                {{LOGIN.FORGOT_PASS |translate}}
+              </a>
+            </small>
+          </div>
+          <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-primary loginButton" (click)="login()" [disabled]="loadingBoolean">
+              <span>{{ LOGIN.TITLE | translate }}</span>
+            </button>
+          </div>
+          <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-outline-primary loginButton" [disabled]="loadingBoolean"
+              (click)="redirectTo('register')">
+              <span>{{ LOGIN.REGISTER | translate }}</span>
+            </button>
+          </div>
+          <div class="col-12 d-flex justify-content-center align-items-center loader-container" *ngIf="loadingBoolean">
+            <div class="loader">
+            </div>
+          </div>
+          <div class="col-12 d-flex align-items-center justify-content-center mt-4">
+            <div>
+              <a (click)="translate.use('es'); selectLang('es')"><img src="assets/es.svg" width="30px" /></a>
+            </div>
+            <div class="ms-2">
+              <a (click)="translate.use('en'); selectLang('en')"><img src="assets/en.svg" width="30px" /></a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
